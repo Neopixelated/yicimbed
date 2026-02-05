@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AAPL / GOOGL / MSFT Stock Analysis</title>
+  <title>Stock Analysis Index</title>
 
   <style>
     * {
@@ -16,142 +16,63 @@
     body {
       height: 100vh;
       width: 100vw;
-      overflow: hidden;
-      background: #000;
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 50px;
-      background: #111;
+      background: #0f172a;
+      color: white;
       display: flex;
       align-items: center;
-      gap: 20px;
-      padding: 0 20px;
-      z-index: 10;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
+      justify-content: center;
     }
 
     .container {
-      display: flex;
-      height: calc(100vh - 50px);
-      margin-top: 50px;
+      text-align: center;
     }
 
-    .chart {
-      width: 50%;
-      height: 100%;
+    h1 {
+      margin-bottom: 30px;
+      font-size: 32px;
     }
 
-    .analysis {
-      width: 50%;
-      height: 100%;
-      padding: 20px;
-      overflow-y: auto;
-      background: #0f172a;
+    ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    a {
+      display: block;
+      padding: 15px;
+      background: #111827;
+      border-radius: 8px;
+      text-decoration: none;
       color: white;
+      font-weight: bold;
+      transition: background 0.2s ease;
     }
 
-    .analysis h1 {
-      margin-bottom: 15px;
-      font-size: 28px;
-    }
-
-    .analysis p {
-      line-height: 1.6;
-      font-size: 16px;
-    }
-
-    /* TradingView widget must be forced to fill */
-    .tradingview-widget-container,
-    .tradingview-widget-container__widget {
-      width: 100%;
-      height: 100%;
-    }
-
-    .tradingview-widget-copyright {
-      display: none;
+    a:hover {
+      background: #1f2933;
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVIGATION -->
-  <nav>
-    <a href="index.html">AAPL</a>
-    <a href="msft.html">MSFT</a>
-    <a href="tsla.html">TSLA</a>
-  </nav>
-
-  <!-- MAIN LAYOUT -->
   <div class="container">
-
-    <!-- LEFT: TRADINGVIEW WIDGET -->
-    <div class="chart">
-      <!-- TradingView Widget BEGIN -->
-      <div class="tradingview-widget-container">
-        <div class="tradingview-widget-container__widget"></div>
-        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
-        {
-          "lineWidth": 2,
-          "lineType": 0,
-          "chartType": "area",
-          "fontColor": "rgb(106, 109, 120)",
-          "gridLineColor": "rgba(242, 242, 242, 0.06)",
-          "volumeUpColor": "rgba(34, 171, 148, 0.5)",
-          "volumeDownColor": "rgba(247, 82, 95, 0.5)",
-          "backgroundColor": "#0F0F0F",
-          "widgetFontColor": "#DBDBDB",
-          "upColor": "#22ab94",
-          "downColor": "#f7525f",
-          "borderUpColor": "#22ab94",
-          "borderDownColor": "#f7525f",
-          "wickUpColor": "#22ab94",
-          "wickDownColor": "#f7525f",
-          "colorTheme": "dark",
-          "locale": "en",
-          "chartOnly": false,
-          "scalePosition": "right",
-          "scaleMode": "Normal",
-          "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
-          "valuesTracking": "1",
-          "changeMode": "price-and-percent",
-          "symbols": [
-            ["Apple", "NASDAQ:AAPL|1D"],
-            ["Google", "NASDAQ:GOOGL|1D"],
-            ["Microsoft", "NASDAQ:MSFT|1D"]
-          ],
-          "dateRanges": ["1d|1", "1m|30", "3m|60", "12m|1D", "60m|1W", "all|1M"],
-          "fontSize": "10",
-          "headerFontSize": "medium",
-          "autosize": true,
-          "width": "100%",
-          "height": "100%"
-        }
-        </script>
-      </div>
-      <!-- TradingView Widget END -->
-    </div>
-
-    <!-- RIGHT: ANALYSIS -->
-    <div class="analysis">
-      <h1>Market Overview Analysis</h1>
-      <p>
-        This panel compares Apple, Google, and Microsoft across multiple timeframes.
-        Relative strength, trend consistency, and drawdown behavior can be evaluated
-        side-by-side. Look for confirmation across symbols when identifying broader
-        market momentum or sector rotation.
-      </p>
-    </div>
-
+    <h1>Stock Analysis Pages</h1>
+    <ul>
+      <li><a href="googl.html">GOOGL</a></li>
+      <li><a href="jpm.html">JPM</a></li>
+      <li><a href="nflx.html">NFLX</a></li>
+      <li><a href="nvda.html">NVDA</a></li>
+      <li><a href="pep.html">PEP</a></li>
+      <li><a href="pypl.html">PYPL</a></li>
+      <li><a href="shel.html">SHEL</a></li>
+      <li><a href="tmc.html">TMC</a></li>
+      <li><a href="zbh.html">ZBH</a></li>
+      <li><a href="gmet.html">GMET</a></li>
+    </ul>
   </div>
 
 </body>
