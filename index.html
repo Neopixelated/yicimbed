@@ -16,7 +16,7 @@
     body {
       height: 100vh;
       width: 100vw;
-      background: #0f172a;
+      background: linear-gradient(135deg, #020617, #020617);
       color: white;
       display: flex;
       align-items: center;
@@ -25,42 +25,57 @@
 
     .container {
       text-align: center;
+      width: 100%;
+      max-width: 900px;
+      padding: 40px;
     }
 
     h1 {
-      margin-bottom: 30px;
-      font-size: 32px;
+      margin-bottom: 40px;
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
 
     ul {
       list-style: none;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 20px;
-      max-width: 600px;
-      margin: 0 auto;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 30px;
     }
 
     a {
-      display: block;
-      padding: 15px;
-      background: #111827;
-      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 80px;
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      border-radius: 14px;
       text-decoration: none;
       color: white;
-      font-weight: bold;
-      transition: background 0.2s ease;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
     }
 
     a:hover {
-      background: #1f2933;
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+      background: linear-gradient(135deg, #334155, #1e293b);
+    }
+
+    a:active {
+      transform: translateY(0);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <h1>Stock Analysis Pages</h1>
+    <h1>Stock Analysis Dashboard</h1>
     <ul>
       <li><a href="googl.html">GOOGL</a></li>
       <li><a href="jpm.html">JPM</a></li>
