@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stock Dashboard – Internal Pages</title>
+  <title>Stock Dashboard</title>
 
   <style>
     * {
@@ -27,15 +27,17 @@
       border-bottom: 1px solid #1e293b;
       display: flex;
       align-items: center;
-      gap: 24px;
-      padding: 0 24px;
+      gap: 18px;
+      padding: 0 20px;
+      overflow-x: auto;
     }
 
     nav a {
       color: #e5e7eb;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 700;
+      white-space: nowrap;
     }
 
     nav a:hover {
@@ -89,19 +91,29 @@
 
   <!-- NAVIGATION -->
   <nav>
-    <a href="#aapl">AAPL</a>
+    <a href="#googl">GOOGL</a>
+    <a href="#jpm">JPM</a>
+    <a href="#nflx">NFLX</a>
     <a href="#nvda">NVDA</a>
+    <a href="#pep">PEP</a>
+    <a href="#pypl">PYPL</a>
+    <a href="#shel">SHEL</a>
+    <a href="#tmc">TMC</a>
+    <a href="#zbh">ZBH</a>
+    <a href="#gmet">GMET</a>
   </nav>
 
-  <!-- PAGE: AAPL -->
-  <section id="aapl" class="page">
+  <!-- TEMPLATE: COPY STRUCTURE PER STOCK -->
+
+  <!-- GOOGL -->
+  <section id="googl" class="page">
     <div class="chart">
       <div class="tradingview-widget-container">
         <div class="tradingview-widget-container__widget"></div>
         <script src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
         {
           "autosize": true,
-          "symbol": "NASDAQ:AAPL",
+          "symbol": "NASDAQ:GOOGL",
           "interval": "D",
           "timezone": "Etc/UTC",
           "theme": "dark",
@@ -112,15 +124,60 @@
       </div>
     </div>
     <div class="analysis">
-      <h1>AAPL Analysis</h1>
-      <p>
-        Apple is trading within a longer-term uptrend. Watch the 50‑day and 200‑day
-        moving averages for trend confirmation and key support levels.
-      </p>
+      <h1>GOOGL Analysis</h1>
+      <p>Alphabet trend and momentum analysis.</p>
     </div>
   </section>
 
-  <!-- PAGE: NVDA -->
+  <!-- JPM -->
+  <section id="jpm" class="page">
+    <div class="chart">
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+        {
+          "autosize": true,
+          "symbol": "NYSE:JPM",
+          "interval": "D",
+          "timezone": "Etc/UTC",
+          "theme": "dark",
+          "style": "1",
+          "locale": "en"
+        }
+        </script>
+      </div>
+    </div>
+    <div class="analysis">
+      <h1>JPM Analysis</h1>
+      <p>Banking sector strength and interest rate sensitivity.</p>
+    </div>
+  </section>
+
+  <!-- NFLX -->
+  <section id="nflx" class="page">
+    <div class="chart">
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+        {
+          "autosize": true,
+          "symbol": "NASDAQ:NFLX",
+          "interval": "D",
+          "timezone": "Etc/UTC",
+          "theme": "dark",
+          "style": "1",
+          "locale": "en"
+        }
+        </script>
+      </div>
+    </div>
+    <div class="analysis">
+      <h1>NFLX Analysis</h1>
+      <p>Streaming growth trends and volatility zones.</p>
+    </div>
+  </section>
+
+  <!-- NVDA -->
   <section id="nvda" class="page">
     <div class="chart">
       <div class="tradingview-widget-container">
@@ -140,16 +197,157 @@
     </div>
     <div class="analysis">
       <h1>NVDA Analysis</h1>
-      <p>
-        NVIDIA continues to show strong momentum driven by AI demand. Monitor
-        volume expansion and higher‑low structure for continuation signals.
-      </p>
+      <p>AI-driven momentum and trend continuation levels.</p>
+    </div>
+  </section>
+
+  <!-- PEP -->
+  <section id="pep" class="page">
+    <div class="chart">
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+        {
+          "autosize": true,
+          "symbol": "NASDAQ:PEP",
+          "interval": "D",
+          "timezone": "Etc/UTC",
+          "theme": "dark",
+          "style": "1",
+          "locale": "en"
+        }
+        </script>
+      </div>
+    </div>
+    <div class="analysis">
+      <h1>PEP Analysis</h1>
+      <p>Defensive sector behavior and dividend stability.</p>
+    </div>
+  </section>
+
+  <!-- PYPL -->
+  <section id="pypl" class="page">
+    <div class="chart">
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+        {
+          "autosize": true,
+          "symbol": "NASDAQ:PYPL",
+          "interval": "D",
+          "timezone": "Etc/UTC",
+          "theme": "dark",
+          "style": "1",
+          "locale": "en"
+        }
+        </script>
+      </div>
+    </div>
+    <div class="analysis">
+      <h1>PYPL Analysis</h1>
+      <p>Payment processing trends and range behavior.</p>
+    </div>
+  </section>
+
+  <!-- SHEL -->
+  <section id="shel" class="page">
+    <div class="chart">
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+        {
+          "autosize": true,
+          "symbol": "NYSE:SHEL",
+          "interval": "D",
+          "timezone": "Etc/UTC",
+          "theme": "dark",
+          "style": "1",
+          "locale": "en"
+        }
+        </script>
+      </div>
+    </div>
+    <div class="analysis">
+      <h1>SHEL Analysis</h1>
+      <p>Energy market exposure and macro sensitivity.</p>
+    </div>
+  </section>
+
+  <!-- TMC -->
+  <section id="tmc" class="page">
+    <div class="chart">
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+        {
+          "autosize": true,
+          "symbol": "NASDAQ:TMC",
+          "interval": "D",
+          "timezone": "Etc/UTC",
+          "theme": "dark",
+          "style": "1",
+          "locale": "en"
+        }
+        </script>
+      </div>
+    </div>
+    <div class="analysis">
+      <h1>TMC Analysis</h1>
+      <p>Speculative structure and volume-based moves.</p>
+    </div>
+  </section>
+
+  <!-- ZBH -->
+  <section id="zbh" class="page">
+    <div class="chart">
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+        {
+          "autosize": true,
+          "symbol": "NYSE:ZBH",
+          "interval": "D",
+          "timezone": "Etc/UTC",
+          "theme": "dark",
+          "style": "1",
+          "locale": "en"
+        }
+        </script>
+      </div>
+    </div>
+    <div class="analysis">
+      <h1>ZBH Analysis</h1>
+      <p>Healthcare equipment trends and relative strength.</p>
+    </div>
+  </section>
+
+  <!-- GMET -->
+  <section id="gmet" class="page">
+    <div class="chart">
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+        {
+          "autosize": true,
+          "symbol": "NYSE:GMET",
+          "interval": "D",
+          "timezone": "Etc/UTC",
+          "theme": "dark",
+          "style": "1",
+          "locale": "en"
+        }
+        </script>
+      </div>
+    </div>
+    <div class="analysis">
+      <h1>GMET Analysis</h1>
+      <p>Materials sector positioning and long-term structure.</p>
     </div>
   </section>
 
   <script>
     function showPage() {
-      const hash = location.hash.replace('#', '') || 'aapl';
+      const hash = location.hash.replace('#', '') || 'googl';
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       const active = document.getElementById(hash);
       if (active) active.classList.add('active');
